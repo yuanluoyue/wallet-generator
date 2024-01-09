@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen-sui": "node ./src/suiWallet.js"
+    "gen-sui": "node ./src/suiWallet.js",
+    "gen-evm": "node ./src/evmWallet.js"
   },
   "keywords": [],
   "author": "",

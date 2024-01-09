@@ -14,3 +14,7 @@ npm i
 ```shell
 npm run gen-sui
 ```
+生成 EVM 钱包
+```shell
+npm run gen-evm
+```
