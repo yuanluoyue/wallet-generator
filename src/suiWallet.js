@@ -2,7 +2,8 @@
 const bip39 = require('bip39')
 const { Ed25519Keypair } = require('@mysten/sui.js/keypairs/ed25519')
 
-const { isUseRule, rule, needCount } = require('../config')
+const { needCount } = require('../config')
+const { checkWallet } = require('./utils')
 
 const genWallet = () => {
   const mnemonic = bip39.generateMnemonic()
@@ -17,15 +18,6 @@ const genWallet = () => {
   }
 
   return wallet
-}
-
-const checkWallet = wallet => {
-  const isMatch = rule.test(wallet.address)
-  if (isUseRule) {
-    return isMatch
-  } else {
-    return true
-  }
 }
 
 const main = () => {
